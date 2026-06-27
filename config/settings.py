@@ -136,3 +136,6 @@ REST_FRAMEWORK = {
         "rest_framework_simplejwt.authentication.JWTAuthentication",
     ],
 }
+
+# config/settings.py
+AUTH_USER_MODEL = 'accounts.User'
