@@ -132,10 +132,12 @@ CORS_ALLOW_ALL_ORIGINS = True
 # Django REST Framework Configuration
 
 REST_FRAMEWORK = {
-    "DEFAULT_PERMISSION_CLASSES": [
+    "DEFAULT_AUTHENTICATION_CLASSES": [
         "rest_framework_simplejwt.authentication.JWTAuthentication",
     ],
+    "DEFAULT_PERMISSION_CLASSES": [
+        "rest_framework.permissions.IsAuthenticated",
+    ],
 }
-
 # config/settings.py
 AUTH_USER_MODEL = 'accounts.User'
